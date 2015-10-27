@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title></title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+</head>
+
+<div class="body">
+
+
+<div class="header">Walt Disney World Map</div>
+
+
+
+
+<div class="container straighten">
+
+  <div id="popup">
+
+        <div class="marker" id="epcot"><img src="http://vignette2.wikia.nocookie.net/disney/images/7/79/Mickey_Mouse_head.png/revision/latest?cb=20150217204533"></div>
+
+        <div class="marker" id="downtown"><img src="http://vignette2.wikia.nocookie.net/disney/images/7/79/Mickey_Mouse_head.png/revision/latest?cb=20150217204533"></div>
+
+        <div class="marker" id="animal"><img src="http://vignette2.wikia.nocookie.net/disney/images/7/79/Mickey_Mouse_head.png/revision/latest?cb=20150217204533"></div>
+
+        <div class="marker" id="magic"><img src="http://vignette2.wikia.nocookie.net/disney/images/7/79/Mickey_Mouse_head.png/revision/latest?cb=20150217204533"></div>
+
+        <div class="marker" id="mgm"><img src="http://vignette2.wikia.nocookie.net/disney/images/7/79/Mickey_Mouse_head.png/revision/latest?cb=20150217204533"></div>
+
+        <div class="marker" id="typhoon"><img src="http://vignette2.wikia.nocookie.net/disney/images/7/79/Mickey_Mouse_head.png/revision/latest?cb=20150217204533"></div>
+
+        <div class="marker" id="blizzard"><img src="http://vignette2.wikia.nocookie.net/disney/images/7/79/Mickey_Mouse_head.png/revision/latest?cb=20150217204533"></div>
+
+        <img src="http://www.wdwinfo.com/resortmaps/propertymap2.JPG" />
+
+    </div><!--popup-->
+
+</div>
+
+
+
+
+<div class="textbox">
+  <div class="bubbletext">Hi folks! Allow me to take you through Walt Disney World. Click on a Mickey head to learn about some of Disney's attractions.</div>
+  <img src="http://cliparts.co/cliparts/ziX/edK/ziXedK88T.gif" class="mickey"/>
+  <img id="irc_mi" class="bubble" style="margin-top: 0px;" src="http://res.freestockphotos.biz/pictures/15/15679-illustration-of-a-cartoon-speech-bubble-pv.png"/>
+    
+</div>
+
+
+
+
+
+
+
+<style>
+
+body{
+  background-color: yellow;
+  border: 5px solid red;
+
+}
+
+.header{
+  font-size: 50px;
+  font-weight: bold;
+  text-align:center;
+  color:black;
+  font-family: cursive, fantasy;
+  letter-spacing: 20px
+
+}
+
+.container{
+
+    width: 80%;
+    display: inline-block;
+    position: absolute;
+    margin-top: 30px;
+    margin-left: 30px;
+
+
+
+}
+.marker{
+
+    position: absolute;
+    width: 20px;
+    height: 17px;
+    background-color: none;
+    border: 3px solid red;
+    border-radius: 50%;
+    transition: background-color 0.5s ease;
+    cursor: pointer;
+    z-index: 900;
+}
+
+.textbox {
+    width: 30%;
+    display: inline-block;
+    vertical-align: top;
+    padding: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    line-height: 1.5em;
+    position: absolute;
+    height: 420px;
+    margin-left: 700px;
+    margin-top: 200px;
+
+}
+
+
+.mickey{
+  position: absolute;
+  z-index: 1;
+  width: 90%;
+  height: 78%;
+  right: -20%;
+  bottom: -5%
+
+}
+.bubble{
+  position:absolute;
+  z-index: 0;
+  width: 80%;
+  left: 8%;
+  top: -10%;
+
+}
+.bubbletext{
+  position: absolute; 
+  z-index: 800;
+  top: -5%;
+  width: 60%;
+  left: 16%;
+  color:green;
+  line-height: 1.5em;
+
+}
+.text{
+  position:relative;
+  bottom:5%;
+  left:0;
+  font-size:15px;
+  line-height: .5em;
+  font-color:blue;
+
+}
+
+
+
+.container img {    
+
+    width: 100%;
+
+}
+
+
+
+.marker:hover {
+
+    background-color: red;
+
+}
+
+#epcot {
+
+    top:42%;
+
+    left: 50%;
+
+}
+
+
+#downtown {
+
+    top:60%;
+
+    left: 75%;
+
+}
+
+#animal {
+
+    top: 52%;
+
+    right: 83%;
+
+}
+
+#magic {
+
+    top:17%;
+
+    left: 40%;
+
+}
+
+#mgm {
+
+    top:56%;
+
+    left: 39%;
+
+}
+
+#typhoon {
+
+    top: 67%;
+
+    right: 35%;
+
+}
+
+#blizzard {
+
+    top: 63%;
+
+    right: 67%;
+
+}
+
+.straighten:after{
+
+  display:block;
+
+  height:0;
+
+  clear:both;
+
+  visibility:hidden;
+
+}
+
+#popup{
+
+  position:relative;
+
+}
+
+.hoverbox{
+
+  position:absolute;
+
+  padding:0.2em;
+
+  background-color:white;
+
+  box-shadow:1px 1px 5px rgba(0,0,0,0.4);
+
+  z-index:300;
+
+  font-family:'Roboto', Arial, sans-serif;
+
+  line-height:1em;
+
+  min-width:100px;
+
+  max-width:200px;
+
+}
+
+.popuptitle {
+
+    color: blue;
+
+    font-family:'Roboto', Arial, sans-serif;
+
+    letter-spacing: 0.01em;
+
+    font-size:15px; 
+
+    font-weight:700;
+
+    clear:both;
+
+}
+
+@media screen and (max-width: 900px) {
+
+.container{
+
+    width: 90%;
+
+}
+
+.textbox{
+
+    width: 90%
+
+}
+
+}
+
+</style>
+
+
+
+
+<script>
+
+$(document).ready(function() {
+
+
+
+
+var data = 
+
+[["epcot","Epcot", "Epcot's staple is the giant, golfball-like structure that sits in the park. It's here where one can visit all of the different countries, in a feature called 'The World Showcase.'"],
+
+["downtown","Downtown Disney", "Head to Downtown Disney if you want to shop, eat, or get entertained. Kids can explore a LEGO store, while adults catch La Nouba, a show by Cirque du Soleil."],
+
+["animal","Animal Kingdom", "Take a ride on the safari at Animal Kingdom. It's set on 500 acres!"],
+
+["magic","Magic Kingdom", "It's where Disney's magic happens, and it's Cinderella's home. At the end of night, the park puts on a spectacular fireworks show called 'Wishes. "],
+
+["mgm","MGM Studios", "Better known as Hollywood Studios, come here to see live shows, or get a thrill on the Tower of Terror!"],
+
+["typhoon","Typhoon Lagoon", "Float down a lazy river, and cool off at one of Disney's major water parks."],
+
+["blizzard","Blizzard Beach", "No blizzard here, but it is the home of Summit Plummet, the tallest, steepest waterslide in the world."]];
+
+
+
+
+
+
+
+$(".marker").click(function(){
+
+    $('.bubbletext').empty();
+
+    for (var i=0; i<data.length; i++) {
+
+    if (this.id == data[i][0]) {
+
+        $(".bubbletext").append('<div class="popuptitle">'+data[i][1]+'</div>' + data[i][2]);
+
+    } 
+
+    } 
+
+});
+
+
+
+
+
+
+
+var pos, they, thex;
+
+  
+
+$('.marker').mouseover(function(){
+
+  
+
+  pos = $('#popup').offset()
+
+  thex = event.pageX - pos.left + 10;
+
+  they = event.pageY - pos.top + 0;
+
+  if (thex > $('#popup').width() - 150) {thex = $('#popup').
+
+  width() - 150};
+
+  if (they > $('#popup').height() - 100) {they = $('#popup').
+
+  height() -100};
+
+  
+
+  
+
+
+
+
+   for (var i=0; i<data.length; i++) {
+
+    if (this.id == data[i][0]) {
+
+        $("#popup").append('<div class="hoverbox" style="top:' + they + 'px;left:' + thex +
+
+    'px;"><div class="popuptitle">'+data[i][1]+'</div>');
+
+   }
+
+   }
+
+  
+
+});//mouseover
+
+$('.marker').mouseout(function(){
+
+  $('.hoverbox').remove();
+
+});
+
+
+
+
+});//doc ready
+
+</script>
+
+
+
+
+</body>
+
+</html>
